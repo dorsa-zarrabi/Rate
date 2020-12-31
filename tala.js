@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import currency from "./currency.js";
 import {CodeToparcham,FarsiNametala} from "./assts";
-import picios from "picios";
+import axios from "axios";
 
 const tala =() =>{
 	const [talas,settala] = useState([]);
 	const ApiUrl = "https://currency.jafari.li/json";
 	useEffect(() => {
-		picios({
+		axios({
 			method: "GET",
 			url: ApiUrl
 		})
