@@ -1,17 +1,5 @@
 /*import vase farakhani ye mazhol hastesh ke mishe azash estefade konim. */
 import React from 'react';
-//baray in ke port 3000 ro bekhone
-const express = require('express');
-const app = express();
-const path = require('path');
-const fs = require('fs');
-app.get('/currency', function (req, res) {
-	const pathToHtmlFile = path.resolve(__dirname, '../rate');
-	const contentFromHtmlFile = fs.readFileSync(pathToHtmlFile, 'utf-8');
-	res.send(contentFromHtmlFile);
-}); 
-app.use('/static', express.static(path.resolve(__dirname, '../rate')));
-
 function currency(props) { return(
 	<div ClassName="card" key={props.index}>
 		<div ClassName="body-card d-flex justify-content-between">
@@ -28,9 +16,9 @@ function currency(props) { return(
 			</div>
 			<div ClassName="d-flex justify-content-between align-items-center">
 				<h4 className="code-currency"> 
-					{props.code-courency}
+					{props.code-courrency}
 				</h4>
-				<img className="img" src={`${window.location.origin}/parcham/${props.courency_parcham}.png`} width="43" height="33" alt={props.code-courency}/>
+				<img className="img" src={`${window.location.origin}/parcham/${props.courrency-parcham}.png`} width="43" height="33" alt={props.code-courency}/>
 			</div>
 		</div>
 	</div>
