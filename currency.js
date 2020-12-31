@@ -18,7 +18,7 @@ function currency(props) { return(
 				<h4 className="code-currency"> 
 					{props.code-courrency}
 				</h4>
-				<img className="img" src={`${window.location.origin}/parcham/${props.courrency-parcham}.png`} width="43" height="33" alt={props.code-courency}/>
+				<img className="img" src={`${window.location.origin}/parcham/${props.parcham-courrency}.png`} width="43" height="33" alt={props.code-courency}/>
 			</div>
 		</div>
 	</div>
